@@ -188,4 +188,22 @@ namespace mongo {
         double _total;
         long long _count;
     };
+    
+    class AccumulatorAngleAvg : public Accumulator {
+    public:
+        virtual void processInternal(const Value& input, bool merging);
+        virtual Value getValue(bool toBeMerged) const;
+        virtual const char* getOpName() const;
+        virtual void reset();
+        
+        static boost::intrusive_ptr<Accumulator> create();
+        
+    private:
+        AccumulatorAngleAvg();
+        
+        double _smallAngles;
+        double _largeAngles;
+        long long _smallCount;
+        long long _largeCount;
+    };
 }

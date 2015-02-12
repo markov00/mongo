@@ -483,6 +483,7 @@ coredbEnv.Library("coredb", [
         "db/dbcommands_generic.cpp",
         "db/matcher/matcher.cpp",
         "db/pipeline/accumulator_add_to_set.cpp",
+        "db/pipeline/accumulator_angle_avg.cpp",
         "db/pipeline/accumulator_avg.cpp",
         "db/pipeline/accumulator_first.cpp",
         "db/pipeline/accumulator_last.cpp",
